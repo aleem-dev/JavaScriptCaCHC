@@ -23,3 +23,5 @@ let provence;
 
 console.log(typeof temprature);
 console.log(typeof provence);
+
+//read ecma scrip specification and mdn docs
