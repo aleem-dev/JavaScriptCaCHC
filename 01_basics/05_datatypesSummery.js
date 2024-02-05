@@ -12,6 +12,8 @@
 // console.log(typeof undefined);  // undefined
 // console.log(typeof BigInt(1));  // bigint
 
+let bigNumber = 123456789n  // n at the end defines a variable as bigint
+// console.log(typeof bigNumber)       // bigint
 
 // non premetive (reference) : Array, Object, Function
 
