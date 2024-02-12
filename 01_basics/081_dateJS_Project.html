@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Project Reference URL https://www.youtube.com/watch?v=QNXI93HKQCM -->
+    <!-- Project Reference URL https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Time:</p> <p id="ct1">Placeholder for Current Time</p>
+    <p>Compare</p>
+    <p>Time:</p> <p id="ct2">Placeholder for Current Time</p>
+    <p>Result</p><p id="rs">Placeholder for Current Time</p>
+    <script>
+        let timeNow = new Date();
+        let selectedtime = new Date()
+        // getDocumnetbyID("ct").innerHTML = timeNow.toLocaleString();
+        document.getElementById("ct1").innerText = `timeNow=> ${timeNow} \ntolocalDateString()=> ${timeNow.toLocaleDateString()} \ntolocalstring()=> ${timeNow.toLocaleString()} \ntolocalTimeString()=> ${timeNow.toLocaleTimeString()}`;
+        document.getElementById("ct2").innerText = `selectedtime=> ${selectedtime} \ntolocalDateString()=> ${selectedtime.toLocaleDateString()} \ntolocalstring()=> ${selectedtime.toLocaleString()} \ntolocalTimeString()=> ${selectedtime.toLocaleTimeString()}`;
+        document.getElementById("rs").innerText = `The timezone ${timeNow.toLocaleTimeString()} is ${(selectedtime.getTimezoneOffset())/60} hour/s ahead/behind than the timezone ${selectedtime.toLocaleTimeString()}`;
+    </script>
+</body>
+</html>
