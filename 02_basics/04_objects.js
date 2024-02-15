@@ -12,7 +12,7 @@ const fullname = {
 
 tinderUsr.userFullname = fullname
 
-console.log(tinderUsr);
+// console.log(tinderUsr);
 // console.log(tinderUsr.userFullname);
 // console.log(tinderUsr.userFullname.names);
 // console.log(tinderUsr.userFullname.names.firstname);
@@ -49,7 +49,7 @@ const users = [
     {
         id:1,
         email:"a@a.com"
-    }
+    },
     {
         id:1,
         email:"a@a.com"
@@ -57,3 +57,16 @@ const users = [
 ]
 
 //pending video 12:55 https://youtu.be/4lb2pXWWXJI?feature=shared
+
+console.log(users[0].email);    // now when data come from database as in array of object we can use . operator
+                                // we can also use map or filter mathod to get the desired data
+console.log(tinderUsr);
+console.log(Object.keys(tinderUsr));    // ** very improtoant **  we get all the keys in an array, very usefull with database and projects
+console.log(Object.values(tinderUsr));
+console.log(Object.entries(tinderUsr)); // converts and object to array of array for each key value pair.  Note if there is and object withing the object it wont be able to covert it
+
+
+// many times we loop an object or array and that time if the value does not exist the entire program crashes
+// solution is that use hasOwnProperty() method to check
+
+console.log(tinderUsr.hasOwnProperty("isLogedIn")); // true check the if the property is there or not
