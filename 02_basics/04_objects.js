@@ -16,7 +16,9 @@ tinderUsr.userFullname = fullname
 // console.log(tinderUsr.userFullname);
 // console.log(tinderUsr.userFullname.names);
 // console.log(tinderUsr.userFullname.names.firstname);
-// console.log(tinderUsr.userFullname.names.secondname);
+console.log(tinderUsr.userFullname.names.secondname);
+console.log(tinderUsr.userFullname?.names.secondname);  // Note that '?' it not give error if the property is not there.
+                                                        // Sometimes in API response we dont know if the property is there or not.  Use '?'.
 
 
 // combine object or merge object
@@ -102,7 +104,7 @@ const {courseInstructor: instructor} = course;
 
 
 // ** API JSON object
-// keys and values are strings, every line ends with , and last line does not have , comma
+// keys and values are strings, every line ends with ',' comma and last line does not have ',' comma
 // below is json example
 // {
 //     "name": "Aleem",

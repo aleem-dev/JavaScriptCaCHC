@@ -16,8 +16,12 @@ const JsUser = {
     location:"Ahmedabad",
     email: "aleem@gmail.com",
     isLogedin: false,
-    lastLoggedIn: ["monday","satureday"]
+    lastLoggedIn: ["monday","satureday"],
+    testFunc: function(){
+        console.log("hi i am test function defined inside an object")
+    }
 }
+console.log(JsUser.testFunc());
 console.log(JsUser);
 
 // access the object property
