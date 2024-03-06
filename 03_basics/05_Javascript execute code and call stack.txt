@@ -1,0 +1,62 @@
+https://www.youtube.com/watch?v=ByhtOgF6uYM&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=25
+Important concepts
+-	Global Execution context
+	-	Memory Phase
+		- record all the variable as undefined
+		- record all function as its definition
+	-	Execution Phase
+		- assign values to all the variable
+		- arithmetic and logical operation
+		- function executions
+
+For each function
+	- New Variable Enviroment and Execution Thread sandbox, it gets deleted after execution
+		- Memory Phase and - Execution Phase
+
+
+
+Global Exection
+	Memory Phase
+	Execution Phase
+		Function foo1 call foo1()
+		Function foo1
+			New Variable Environment (NVE)
+			Execution thread (ET)
+				Memory Phase
+				Executino Phase
+			return
+			Delete NVE and ET
+
+		Functin foo2 call foo2()
+		Function foo2
+			New Variable Environment (NVE)
+			Execution thread (ET)
+				Memory Phase
+				Executino Phase
+			return
+			Delete NVE and ET
+
+// create a snippet in browser as show below save it and debug it
+// check 
+//	global execution context
+//	Memory Phase
+//	Executin Phase
+//	Call Stack
+
+//snippet javascript code execution
+let val1 = 5;
+let val2 = 10;
+function add(num1, num2){
+    return num1+num2
+}
+let result1 = add(val1,val2)
+let result2 = add(3,4)
+
+//snippet callstack
+let val1 = 5;
+let val2 = 10;
+function add(num1, num2){
+    return num1+num2
+}
+let result1 = add(val1,val2)
+let result2 = add(3,4)
