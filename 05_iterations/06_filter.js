@@ -43,3 +43,5 @@ const books = [
     return bk.publish >= 1995 && bk.genre === "History"
 })
   console.log(userBooks);
+
+  // note: there are three argument filter takes, item in array, index and the array, we can do same work with help of foreach loop as well
