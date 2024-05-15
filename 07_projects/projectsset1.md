@@ -3,6 +3,8 @@
 ## project link
 [Click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)
 
+
+
 # Solution code
 
 ## project 1
@@ -35,6 +37,8 @@ buttons.forEach(function (button) {
 
 
 ```
+### Aleem solution project link
+[Click here](https://stackblitz.com/edit/dom-project-chaiaurcode-3g74py?file=1-colorChanger%2Fchaiaurcode.js)
 
 ## project 2 solution
 
