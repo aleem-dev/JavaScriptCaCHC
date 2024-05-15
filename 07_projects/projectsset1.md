@@ -37,7 +37,7 @@ buttons.forEach(function (button) {
 
 
 ```
-### Aleem solution project link
+### Aleem solution with switch case
 [Click here](https://stackblitz.com/edit/dom-project-chaiaurcode-3g74py?file=1-colorChanger%2Fchaiaurcode.js)
 
 ## project 2 solution
