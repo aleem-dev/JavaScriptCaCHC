@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    function foo(){console.log(`setTimeout working at 5 second mark`)
+        document.querySelector('h1').innerHTML = 'Snap!! press stop button'
+    }
+    const fooTimeout = setTimeout(foo, 2000)
+
+    document.querySelector('#stop').addEventListener('click',()=> {console.log('button event listner');
+    const para = document.createElement("p");
+    para.innerText = "This is a paragraph";
+    document.querySelector('h1').insertAdjacentElement(1,para);
+    clearTimeout(fooTimeout)   
+    })
+    
+</script>
+</html>
