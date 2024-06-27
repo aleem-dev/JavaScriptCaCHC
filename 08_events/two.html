@@ -10,17 +10,17 @@
     <button id="stop">Stop</button>
 </body>
 <script>
-    function foo(){console.log(`setTimeout working at 5 second mark`)
+    function foo(){
+        console.log(`setTimeout working at 5 second mark`)
         document.querySelector('h1').innerHTML = 'Snap!! press stop button'
     }
-    const fooTimeout = setTimeout(foo, 2000)
-
-    document.querySelector('#stop').addEventListener('click',()=> {console.log('button event listner');
-    const para = document.createElement("p");
-    para.innerText = "This is a paragraph";
-    document.querySelector('h1').insertAdjacentElement(1,para);
-    clearTimeout(fooTimeout)   
+    const fooTimeout = setTimeout(foo, 5000)
+    document.querySelector('#stop').addEventListener('click',()=> {
+        console.log('button event listner');
+        const para = document.createElement("p");
+        para.innerText = "You have canceled the timer";
+        document.querySelector('h1').insertAdjacentElement('afterend',para);
+        clearTimeout(fooTimeout)   
     })
-    
 </script>
 </html>
