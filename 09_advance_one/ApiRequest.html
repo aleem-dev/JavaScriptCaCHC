@@ -25,5 +25,26 @@
         }
     }
     xhr.send();
+    const userName = prompt("enter a github username:");
+    const nRequestUrl = `https://api.github.com/users/${userName}`
+    const xhr1 = new XMLHttpRequest()
+    xhr1.open('GET',nRequestUrl)
+    xhr1.onreadystatechange = function () {
+        console.log(xhr1.readyState);
+        if(xhr1.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            console.log(data);
+            console.log(data.followers)
+        }
+    }
+    xhr1.send()
+
+    //************* very important **********
+    //below will not work as xmhttprequest works on callback based approach we need to use either Since XMLHttpRequest is event-driven, you must use an event (onreadystatechange, onload, onerror, etc.) to listen for changes and execute code accordingly. The actual logic runs inside a callback function.  we need to keep the call back ready as .send() method immidiately send the request may cause an error if the call back is not set up
+    // ********************************************
+    // xhr1.send()
+    // .then((responseText)=>JSON.parse(responseText))
+    // .then((data)=>console.log(data))
+    // .catch((error)=>console.log('error occured: '+error))
 </script>
 </html>
