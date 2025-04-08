@@ -11,6 +11,11 @@ toLowerCase
 ##parts of OOP
 Object literal
     -Constructor function
+        new keyword, 
+        step1:when ever we use new key word it creates an empty object, it is called instance.
+        step2: new keyword calls constrocter function and packs all the arguments
+        step3: this keyword injects all the argument to empty object
+        step4: it implicitely return the object.
     -Prototypes
     -Classes
     -Instances (new, this)
