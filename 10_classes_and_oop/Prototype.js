@@ -1,8 +1,8 @@
 // let myName = "hitesh     "
 // let mychannel = "chai     "
 
-// console.log(myName.trueLength);
-
+// console.log(myName.trueLength);  // this is a goal to create a trueLength method for all objects
+//note: with help of prototype keyword we will add properties or method to any object.
 
 let myHeros = ["thor", "spiderman"]
 
@@ -16,20 +16,24 @@ let heroPower = {
     }
 }
 
-Object.prototype.hitesh = function(){
-    console.log(`hitesh is present in all objects`);
+//adding aleem method to Object using prototype keyword
+Object.prototype.aleem = function(){
+    console.log(`aleem is present in all objects`);
 }
 
-Array.prototype.heyHitesh = function(){
-    console.log(`Hitesh says hello`);
+//adding heyAleem method to Array using prototype keyword
+Array.prototype.heyAleem = function(){
+    console.log(`Aleem says hello`);
 }
 
-// heroPower.hitesh()
-// myHeros.hitesh()
-// myHeros.heyHitesh()
-// heroPower.heyHitesh()
+// heroPower.aleem()
+// myHeros.aleem()
+// myHeros.heyAleem()
+// heroPower.heyAleem()
 
 // inheritance
+// to achieve inheritance we use __proto__ keyword it is different then prototype keyword
+// or we use Object.setPrototypeOf(obj1, obj2) syntaxt
 
 const User = {
     name: "chai",

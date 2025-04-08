@@ -1,17 +1,25 @@
-function multipleBy5(num){
+// function multipleBy5(num){
 
-    return num*5
-}
+//     return num*5
+// }
 
-multipleBy5.power = 2
+//since function is an object you can add properties to an object by . operator
+// multipleBy5.power = 2
+// multipleBy5.aleem = 'Aleem is React Native Developer'
 
-console.log(multipleBy5(5));
-console.log(multipleBy5.power);
-console.log(multipleBy5.prototype);
+// console.log(multipleBy5(5));
+// console.log(multipleBy5.power);
+// console.log(multipleBy5.aleem);
+// console.log(multipleBy5);
+// console.log(multipleBy5.prototype);
+
+//Object.prototype.aleem = 'Aleem is React Native Developer'
+//console.log(Object.prototype)  // need to learn during prototype, as we use this keyword to add method or properties to an null, object, string, array, function
 
 function createUser(username, score){
     this.username = username
     this.score = score
+    
 }
 
 createUser.prototype.increment = function(){
@@ -20,6 +28,8 @@ createUser.prototype.increment = function(){
 createUser.prototype.printMe = function(){
     console.log(`price is ${this.score}`);
 }
+
+console.log(createUser)
 
 const chai = new createUser("chai", 25)
 const tea = createUser("tea", 250)
