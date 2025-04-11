@@ -1,0 +1,65 @@
+<!-- Below is very interesting approach -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    function handleclick(){
+        console.log(App.btn)    // <button>Button Clicked</button>
+        console.log(App.library)    //React
+        console.log(App.server) //https://localhost:3000
+        console.log(App.ths)    // React {library: 'React', server: 'https://localhost:3000', btn: button, ths: React} surprice that there is whole this object, why?
+    }
+    class React {
+        constructor(){
+            this.library = 'React'
+            this.server = 'https://localhost:3000'
+            this.btn = document.querySelector('button')
+            this.ths = this
+        }
+        
+    }
+    const App = new React()
+    App.btn.addEventListener('click', handleclick)  //<button>Button Clicked</button> bind.html:14 React    bind.html:15 https://localhost:3000
+</script>
+</html>
+
+<!-- hc code -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            //requirement
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this)) //here if I dont do bind the server value will not come as in this context there is only button not the other things.
+
+        }
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);
+        }
+    }
+
+    const app = new React()
+</script>
+</html> -->
